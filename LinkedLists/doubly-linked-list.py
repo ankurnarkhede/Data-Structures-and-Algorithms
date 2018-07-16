@@ -53,11 +53,9 @@ class DoubleLinkedList:
             self.head = Node (data)
             self.tail = self.head
         else:
-            current = self.head
-            while (current.next != None):
-                current = current.next
-            current.next = Node (data, None, current)
-            self.tail = current.next
+            new_node = Node (data, None, self.tail)
+            self.tail.next = new_node
+            self.tail = new_node
 
     def delete(self, data):
         current = self.head
