@@ -7,10 +7,13 @@ def swap(a,x,y):
 def SelectionSort(a):
     "perform selection sort on array a"
     for i in range(0,len(a),+1):
+
         least=i
+
         for j in range(i+1,len(a),+1):
             if(a[j]<a[least]):
-                swap(a,j,least)
+                least=j
+        swap(a,i,least)
 
 
 # main
