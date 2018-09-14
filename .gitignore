@@ -108,6 +108,7 @@ venv.bak/
 #custon
 
 .idea/
+DataStructureAndAlgorithmicThinkingWithPython/
 
 inputs.py
 temp.py
@@ -117,3 +118,8 @@ temp3.py
 temp.txt
 temp1.txt
 temp2.txt
+
+temp/
+
+
+
