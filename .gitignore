@@ -108,7 +108,7 @@ venv.bak/
 #custon
 
 .idea/
-DataStructureAndAlgorithmicThinkingWithPython/
+temp/
 
 inputs.py
 temp.py
