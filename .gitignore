@@ -108,6 +108,7 @@ venv.bak/
 #custon
 
 .idea/
+*.iml
 temp/
 
 inputs.py

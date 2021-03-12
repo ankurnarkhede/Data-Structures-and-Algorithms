@@ -1,4 +1,3 @@
-
 # Implementation of Singly Linked list in Python
 
 
@@ -9,11 +8,9 @@ class Node:
         self.data = data
         self.next = None
 
-
     def set_data(self, data):
         # method for setting the data field of the node
         self.data = data
-
 
     def get_data(self):
         # method for getting the data field of the node
@@ -33,7 +30,7 @@ class Node:
 
 
 # class for defining a Singly linked list
-class SinglyLinkedList (object):
+class SinglyLinkedList(object):
     # initializing a list
     def __init__(self):
         self.length = 0
@@ -42,9 +39,9 @@ class SinglyLinkedList (object):
     def addNode(self, node):
         # method to add a node in the linked list
         if self.length == 0:
-            self.addBeg (node)
+            self.addBeg(node)
         else:
-            self.addLast (node)
+            self.addLast(node)
 
     def addBeg(self, node):
         # method to add a node at the beginning of the list with a data
@@ -62,7 +59,7 @@ class SinglyLinkedList (object):
             if currentnode.data == data:
                 newNode.next = currentnode.next
                 currentnode.next = newNode
-                self.length +=1
+                self.length += 1
                 return
             else:
                 currentnode = currentnode.next
@@ -153,7 +150,7 @@ class SinglyLinkedList (object):
             print("The position does not exist. Please enter a valid position")
         # to deletle the first position of the linkedlist
         elif pos == 1:
-            self.deleteBeg ()
+            self.deleteBeg()
             self.length -= 1
         else:
             while currentnode.next != None or count < pos:
@@ -210,24 +207,24 @@ class SinglyLinkedList (object):
         nodeList = []
         currentnode = self.head
         while currentnode != None:
-            nodeList.append (currentnode.data)
+            nodeList.append(currentnode.data)
             currentnode = currentnode.next
 
         print(nodeList)
 
+
 # almost all frequently used methods added
 
 
-
-node1 = Node (1)
-node2 = Node (2)
-node3 = Node (3)
-node4 = Node (4)
-node5 = Node (5)
-ll = SinglyLinkedList ()
-ll.addNode (node1)
-ll.addNode (node2)
-ll.addNode (node3)
-ll.addNode (node4)
-ll.addNode (node5)
-ll.print_list ()
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+ll = SinglyLinkedList()
+ll.addNode(node1)
+ll.addNode(node2)
+ll.addNode(node3)
+ll.addNode(node4)
+ll.addNode(node5)
+ll.print_list()

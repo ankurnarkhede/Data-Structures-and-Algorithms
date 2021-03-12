@@ -50,10 +50,10 @@ class DoubleLinkedList:
 
     def insert(self, data):
         if (self.head == None):  # To imply that if head == None
-            self.head = Node (data)
+            self.head = Node(data)
             self.tail = self.head
         else:
-            new_node = Node (data, None, self.tail)
+            new_node = Node(data, None, self.tail)
             self.tail.next = new_node
             self.tail = new_node
 
@@ -87,13 +87,13 @@ class DoubleLinkedList:
         return False
 
     def insertAtBeginning(self, data):
-        newNode = Node (data, None, None)
+        newNode = Node(data, None, None)
         if (self.head == None):  # To imply that if head == None
             self.head = self.tail = newNode
         else:
-            newNode.setPrev (None)
-            newNode.set_next (self.head)
-            self.head.setPrev (newNode)
+            newNode.setPrev(None)
+            newNode.set_next(self.head)
+            self.head.setPrev(newNode)
             self.head = newNode
 
     def getNode(self, index):
@@ -101,26 +101,26 @@ class DoubleLinkedList:
         if currentNode == None:
             return None
         i = 0
-        while i < index and currentNode.get_next () is not None:
-            currentNode = currentNode.get_next ()
+        while i < index and currentNode.get_next() is not None:
+            currentNode = currentNode.get_next()
             if currentNode == None:
                 break
             i += 1
         return currentNode
 
     def insertAtGivenPosition(self, index, data):
-        newNode = Node (data)
+        newNode = Node(data)
         if self.head == None or index == 0:
-            self.insertAtBeginning (data)
+            self.insertAtBeginning(data)
         elif index > 0:
-            temp = self.getNode (index)
-            if temp == None or temp.get_next () == None:
-                self.insert (data)
+            temp = self.getNode(index)
+            if temp == None or temp.get_next() == None:
+                self.insert(data)
             else:
-                newNode.set_next (temp.get_next ())
-                newNode.setPrev (temp)
-                temp.get_next ().setPrev (newNode)
-                temp.set_next (newNode)
+                newNode.set_next(temp.get_next())
+                newNode.setPrev(temp)
+                temp.get_next().setPrev(newNode)
+                temp.set_next(newNode)
 
     def find(self, data):
         current = self.head
@@ -133,58 +133,58 @@ class DoubleLinkedList:
     def fwd_print(self):
         current = self.head
         if current == None:
-            print ("No elements")
+            print("No elements")
             return False
         while (current != None):
-            print (current.data)
+            print(current.data)
             current = current.next
         return True
 
     def rev_print(self):
         current = self.tail
         if (self.tail == None):
-            print ("No elements")
+            print("No elements")
             return False
 
         while (current != None):
-            print (current.data)
+            print(current.data)
             current = current.prev
         return True
 
 
 if __name__ == '__main__':
     # Initializing list
-    l = DoubleLinkedList ()
+    l = DoubleLinkedList()
 
     # Inserting Values
-    l.insert (1)
-    l.insert (2)
-    l.insert (3)
-    l.insert (4)
+    l.insert(1)
+    l.insert(2)
+    l.insert(3)
+    l.insert(4)
 
     # Forward Print
-    l.fwd_print ()
+    l.fwd_print()
 
     # Reverse Print
-    l.rev_print ()
+    l.rev_print()
 
     # Try to find 3 in the list
-    if (l.find (3)):
-        print ("Found")
+    if (l.find(3)):
+        print("Found")
     else:
-        print ("Not found")
+        print("Not found")
 
     # Delete 3 from the list
-    l.delete (3)
+    l.delete(3)
 
     # Forward Print
-    l.fwd_print ()
+    l.fwd_print()
 
     # Reverse Print
-    l.rev_print ()
+    l.rev_print()
 
     # Now if we find 3, we will not get it in the list
-    if (l.find (3)):
-        print ("Found")
+    if (l.find(3)):
+        print("Found")
     else:
-        print ("Not found")
+        print("Not found")
