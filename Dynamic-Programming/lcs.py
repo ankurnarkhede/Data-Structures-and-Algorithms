@@ -12,5 +12,5 @@ def lcs(X, Y, m, n):
 
 
 X = "AGGTAB"
-Y = "GXTXAY"
+Y = "GXTXAYB"
 print("Length of LCS is ", lcs(X, Y, len(X), len(Y)))
